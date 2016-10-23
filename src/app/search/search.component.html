@@ -1,3 +1,25 @@
-<p>
-  search works!
-</p>
+<div class="container">
+	<h1>Log in</h1>
+	<form>
+		<div class="form-group">
+			<label for="login">Login</label>
+			<input [(ngModel)]='user.login' name='login' type="text" class="form-control" id="login" required>
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input [(ngModel)]='user.password' name='password' type="text" class="form-control" id="password" required>
+		</div>
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input [(ngModel)]='user.name' name='name' type="text" class="form-control" id="name"> {{user.name}}
+		</div>
+		<div class="form-group">
+			<label for="loginType">Login type</label>
+			<select class="form-control" id="loginType" required>
+        <option *ngFor="let type of loginType" >{{type}}</option>
+  </select>
+		</div>
+
+		<button type="submit" class="btn btn-default">Log in</button>
+	</form>
+</div>
