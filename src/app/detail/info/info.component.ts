@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from './user';
+
 
 @Component({
   selector: 'info',
@@ -7,18 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  login : string;
-  name : string;
-
-  setup(user : any) : void{
-
-  }
+  user : User;
 
   constructor() { }
 
   ngOnInit() {
-    this.name = 'Dawid'
-    this.login = 'ddyrcz';
+    this.user = new User('Dawid', 'ddyrcz');
   }
 
 }
