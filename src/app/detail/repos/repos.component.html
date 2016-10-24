@@ -1,3 +1,10 @@
-<p>
-  repos works!
-</p>
+<md-card>
+<md-list>
+   <md-list *ngFor="let repo of repos">
+      <md-list-item>
+         <h3 md-line> {{repo.name}} </h3>
+          <p md-line> {{repo.description}} </p>
+      </md-list-item>
+   </md-list>
+</md-list>
+</md-card>

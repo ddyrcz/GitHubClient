@@ -1,32 +1,5 @@
-<div class="container">
-	<h1>Log in</h1>
-	<form (ngSubmit)='onSubmit()' #form='ngForm'>
-		{{form.form.valid}}
-		<div class="form-group">
-			<label for="login">Login</label>
-			<input #login='ngModel' [(ngModel)]='user.login' name='login' type="text" class="form-control" id="login" required>
-			<div [hidden]="login.valid || login.pristine" class="alert alert-danger">
-				Login is required
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
-			<input #password='ngModel' [(ngModel)]='user.password' name='password' type="text" class="form-control" id="password" required>
-			<div [hidden]="password.valid || password.pristine" class="alert alert-danger">
-				Password is required
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="name">Name</label>
-			<input [(ngModel)]='user.name' name='name' type="text" class="form-control" id="name"> {{user.name}}
-		</div>
-		<div class="form-group">
-			<label for="loginType">Login type</label>
-			<select class="form-control" id="loginType" required>
-        <option *ngFor="let type of loginType" >{{type}}</option>
-  </select>
-		</div>
-
-		<button type="submit" class="btn btn-default" [disabled]='!form.form.valid'>Log in</button>
-	</form>
-</div>
+<md-card>
+	  <md-input placeholder="Search" align="end">
+   
+	</md-input>
+</md-card>
