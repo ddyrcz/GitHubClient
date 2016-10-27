@@ -9,15 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
-
   }
-
-
 
   query: string;
 
   search() {
     console.log(this.query);
-
   }
 }

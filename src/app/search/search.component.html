@@ -1,8 +1,11 @@
 <md-card>
-	<md-input placeholder="Search">
-		<!-- TODO: search icon html code-->
-		<!--<span md-prefix>&#128269;</span>-->
-	</md-input>
+	<div class="center">
+		<md-input [(ngModel)]='query' name='query' class='input' #input (keyup.enter)='search()' placeholder="Search">
+			<!-- TODO: search icon html code-->
+			<!--<span md-prefix>&#128269;</span>-->
+		</md-input>
+		{{query}}
+	</div>
 </md-card>
-<md-icon>home</md-icon>
-<md-progress-circle [mode]="loadingSpinnerMode"></md-progress-circle>
+<!--<md-icon>home</md-icon>-->
+<!--<md-progress-circle [mode]="loadingSpinnerMode"></md-progress-circle>-->
