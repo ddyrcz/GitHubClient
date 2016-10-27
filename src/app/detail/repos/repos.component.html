@@ -1,10 +1,10 @@
 <md-card>
-<md-list>
-   <md-list *ngFor="let repo of repos">
-      <md-list-item>
-         <h3 md-line> {{repo.name}} </h3>
-          <p md-line> {{repo.description}} </p>
-      </md-list-item>
-   </md-list>
-</md-list>
+	<md-list>
+		<md-list *ngFor="let repo of repos">
+			<md-list-item>
+				<h1 md-line class='name'> {{repo.name}} </h1>
+				<p md-line class='desc'> {{repo.description}} </p>
+			</md-list-item>
+		</md-list>
+	</md-list>
 </md-card>

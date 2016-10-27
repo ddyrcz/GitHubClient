@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Repo} from './repo';
+import { Repo } from './repo';
 
 @Component({
   selector: 'repos',
@@ -8,15 +8,24 @@ import {Repo} from './repo';
 })
 export class ReposComponent implements OnInit {
 
-  repos : Repo[]; 
+  repos: Repo[];
 
   constructor() { }
 
   ngOnInit() {
-    this.repos =[
-      new Repo('Squares', 'Desc'),
-      new Repo('GithubClient', 'Desc'),
-      new Repo('Weather', 'Desc')
+    this.repos = [
+      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
+      new Repo('Weather', 'Weather system using Dark Sky API'),
+      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
+      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
+      new Repo('Weather', 'Weather system using Dark Sky API'),
+      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
+      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
+      new Repo('Weather', 'Weather system using Dark Sky API'),
+      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
+      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
+      new Repo('Weather', 'Weather system using Dark Sky API'),
+      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available')
     ]
   }
 
