@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-
+import { User } from '../detail/user';
+import { GithubService } from '../service/github.service';
 
 @Component({
   selector: 'search',
+  providers: [GithubService],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
 
+  constructor(private service: GithubService) {
+
+  }
+
+  user: User;
+
   ngOnInit(): void {
   }
 
-  query: string;
-
-  search() {
-    console.log(this.query);
+  search(query: string) {
+    this.user = this.service.get(query);
   }
 }
