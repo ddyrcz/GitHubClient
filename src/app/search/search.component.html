@@ -1,15 +1,12 @@
-<md-card>
+<!--<md-card>-->
+<div class="outer">
 	<div class="center">
 		<md-input #query class='input' #input (keyup.enter)='search(query.value)' placeholder="Search">
 			<!-- TODO: search icon html code-->
 			<!--<span md-prefix>&#128269;</span>-->
 		</md-input>
-		<div *ngIf='user'>
-
-			{{user.name}}
-			<BR> {{user.login}}
-		</div>
 	</div>
-</md-card>
+</div>
+<!--</md-card>-->
 <!--<md-icon>home</md-icon>-->
 <!--<md-progress-circle [mode]="loadingSpinnerMode"></md-progress-circle>-->
