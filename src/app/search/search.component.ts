@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { User } from '../detail/user';
 import { GithubService } from '../service/github.service';
 
@@ -9,6 +9,9 @@ import { GithubService } from '../service/github.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
+  @Output()
+  displayUserRequest = new EventEmitter<User>();
 
   constructor(private service: GithubService) {
 
@@ -21,5 +24,6 @@ export class SearchComponent implements OnInit {
 
   search(query: string) {
     this.user = this.service.get(query);
+    this.displayUserRequest.emit(this.user);    
   }
 }

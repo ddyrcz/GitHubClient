@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'avatar',
@@ -9,10 +9,10 @@ export class AvatarComponent implements OnInit {
 
   constructor() { }
 
-  source: string;
+  @Input()
+  avatarUrl: string;
 
   ngOnInit() {
-    this.source = 'http://demos.microdesign-web.com/sample_admin/assets/img/avatar.jpg';
   }
 
 }

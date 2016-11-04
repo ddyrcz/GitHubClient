@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { User } from './detail/user';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app works!';
-
-  loadingSpinnerMode = 'indeterminate';
+export class AppComponent {  
+  foundUser : User;
 }

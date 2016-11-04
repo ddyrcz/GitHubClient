@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Repo } from '../repo';
 
 @Component({
@@ -8,37 +8,13 @@ import { Repo } from '../repo';
 })
 export class ReposComponent implements OnInit {
 
+  @Input()
   repos: Repo[];
 
   constructor() { }
 
   ngOnInit() {
-    this.repos = [
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
-      new Repo('Weather', 'Weather system using Dark Sky API'),
-      new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
-    ]
+  
   }
 
 }
