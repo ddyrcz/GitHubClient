@@ -1,0 +1,7 @@
+{
+  "name": "GitHubClient",
+  "dependencies": {
+    "paper-elements": "^1.0.7",
+    "vaadin-combo-box": "^1.1.5"
+  }
+}

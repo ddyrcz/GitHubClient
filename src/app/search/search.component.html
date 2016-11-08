@@ -1,9 +1,9 @@
 <div class="outer">
 	<div class="center">
-		<md-input #query class='input' (keyup.enter)='search(query.value)' placeholder="Search">
-			<!-- TODO: search icon html code-->
-			<!--<span md-prefix>&#128269;</span>-->
-		</md-input>
+		<paper-input [(value)]="query"></paper-input>
+		<!-- TODO: search icon html code-->
+		<!--<span md-prefix>&#128269;</span>-->
+
 	</div>
 </div>
 <!--<md-icon>home</md-icon>-->
