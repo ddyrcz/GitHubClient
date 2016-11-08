@@ -1,10 +1,5 @@
 <div class="outer">
-	<div class="center">
-		<paper-input [(value)]="query"></paper-input>
-		<!-- TODO: search icon html code-->
-		<!--<span md-prefix>&#128269;</span>-->
-
-	</div>
+	<paper-input label='search' #query (keyup.enter)='search(query.value)'>
+		<!--<div prefix>$</div>-->
+	</paper-input>
 </div>
-<!--<md-icon>home</md-icon>-->
-<!--<md-progress-circle [mode]="loadingSpinnerMode"></md-progress-circle>-->
