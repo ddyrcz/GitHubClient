@@ -1,8 +1,8 @@
-import { User } from '../detail/user';
-import { Repo } from '../detail/repo';
+import { User } from '../model/user';
+import { Repo } from '../model/repo';
 
-const repos : Repo[] = [
-     new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
+const repos: Repo[] = [
+      new Repo('Connections', 'Social web page based on Angular2 and Node.js'),
       new Repo('Weather', 'Weather system using Dark Sky API'),
       new Repo('Dashboard', 'Dashboard page for observing connected computes\' OS parameters, such as free memory available'),
       new Repo('Connections', 'Social web page based on Angular2 and Node.js'),

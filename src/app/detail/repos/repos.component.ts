@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Repo } from '../repo';
+import { Repo } from '../../model/repo';
 
 @Component({
   selector: 'repos',
@@ -14,7 +14,7 @@ export class ReposComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  
+
   }
 
 }
