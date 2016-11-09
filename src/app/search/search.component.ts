@@ -3,27 +3,28 @@ import { User } from '../model/user';
 import { GithubService } from '../service/github.service';
 
 @Component({
-  selector: 'search',
-  providers: [GithubService],
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+    selector: 'search',
+    providers: [GithubService],
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
 
-  @Output()
-  displayUserRequest = new EventEmitter<User>();
+    @Output()
+    displayUserRequest = new EventEmitter<User>();
 
-  constructor(private service: GithubService) {
+    constructor(private service: GithubService) {
 
-  }
+    }
 
-  user: User;
+    user: User;
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  search(query: string) {
-    this.user = this.service.get(query);
-    this.displayUserRequest.emit(this.user);
-  }
+    search(query: string) {
+        this.service.get(query)
+            .then(user => this.user = user);
+        this.displayUserRequest.emit(this.user);
+    }
 }
