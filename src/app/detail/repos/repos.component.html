@@ -1,13 +1,13 @@
 <paper-card>
-
-	Repos
-	<!--<md-list *ngFor="let repo of repos">
-		<md-list-item>
-			<h1 md-line class='name'> {{repo.name}} </h1>
-			<h1 md-line class='description'> {{repo.description}} </h1>
-		</md-list-item>
-	</md-list>
+	<paper-listbox *ngFor="let repo of repos">
+		<paper-item>
+			<paper-item-body two-line>
+				<div>{{repo.name}}</div>
+				<div class='description'>{{repo.description}}</div>
+			</paper-item-body>
+		</paper-item>
+	</paper-listbox>
 	<div *ngIf='!repos'>
 		<img class='img' class='img-circle img-responsive' src="https://assets-cdn.github.com/images/modules/open_graph/github-mark.png">
-	</div>-->
-	<paper-card>
+	</div>
+</paper-card>

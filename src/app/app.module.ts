@@ -18,7 +18,9 @@ import { AvatarComponent } from './detail/avatar/avatar.component';
     ReposComponent,
     AvatarComponent,
     PolymerElement('paper-input'),
-    PolymerElement('paper-card')
+    PolymerElement('paper-card'),
+    PolymerElement('paper-listbox'),
+    PolymerElement('paper-item')
   ],
   imports: [
     BrowserModule,
