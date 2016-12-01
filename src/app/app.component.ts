@@ -7,5 +7,5 @@ import { User } from './model/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  foundUser: User;
+  user: User;
 }

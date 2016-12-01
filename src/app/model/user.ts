@@ -4,11 +4,6 @@ export class User {
     constructor(
         private login: string,
         private name: string,
-        private surname: string,        
-        private repos? : Repo[],
-        private avatarUrl? : string) {
-        this.fullName = `${name} ${surname}`;
+        private avatar_url: string) {
     }
-
-    fullName: string;
 }

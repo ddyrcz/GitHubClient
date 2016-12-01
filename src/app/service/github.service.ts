@@ -1,23 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { User } from '../model/user';
-
-import 'rxjs/add/operator/toPromise';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class GithubService {
 
+    private _githubApi: string = 'https://api.github.com';
 
     constructor(private http: Http) {
     }
 
-    get(query: string): Promise<User> {
-        return this.http.patch('http://localhost:8000/api/cupboards/q1/release', null)
-            .toPromise()
-            .then(response => response.json().data as User)
-            .catch(err => {
-                return Promise.reject(err.message || err);
-            })
-
+    getUser(login): Observable<User> {
+        return this.http.get(`${this._githubApi}/users/${login}`)
+            .map((res: Response) => res.json())
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 }
