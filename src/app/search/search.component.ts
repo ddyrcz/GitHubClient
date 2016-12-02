@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { User } from '../model/user';
+import { Repo } from '../model/repo';
 import { GithubService } from '../service/github.service';
 
 import { Observable } from 'rxjs/Observable';
@@ -15,10 +16,14 @@ export class SearchComponent implements OnInit {
     @Output()
     displayUserRequest = new EventEmitter<User>();
 
+    @Output()
+    displayReposRequest = new EventEmitter<Repo[]>();
+
     constructor(private service: GithubService) {
 
     }
     user: User;
+    repos : Repo[];
 
     ngOnInit(): void {
     }
@@ -31,5 +36,11 @@ export class SearchComponent implements OnInit {
             }, err => {
                 console.log(err);
             })
+
+        this.service.getRepos(query)
+            .subscribe(repos => {
+                this.repos = repos;
+                this.displayReposRequest.emit(this.repos);
+            });
     }
 }

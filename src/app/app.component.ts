@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './model/user';
+import { Repo } from './model/repo';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,5 @@ import { User } from './model/user';
 })
 export class AppComponent {
   user: User;
+  repos : Repo[];
 }
